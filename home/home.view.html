@@ -1,0 +1,21 @@
+﻿<h1>Hi {{vm.user.firstName}}!</h1>
+<p><a href="#!/myposts" class="btn btn-secondary" style="float:right; margin: 10px 10px 10px 10px;">My Posts</a></p><p><a href="#!/login" class="btn btn-primary" style="float:right;">Logout</a></p><h3>All user feeds:</h3>
+<!--<ul>
+    <li ng-repeat="user in vm.allUsers">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a ng-click="vm.deleteUser(user.id)">Delete</a>
+    </li>
+</ul>-->
+<div ng-repeat="user in vm.allUsers" class="card">
+  <div class="card-header">
+    {{user.title}}
+  </div>
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <p>{{user.body}}</p>
+    </blockquote>
+  </div>
+</div>
+
+
+<p>&nbsp;</p>
